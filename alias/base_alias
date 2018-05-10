@@ -1,0 +1,108 @@
+#!/bin/bash
+
+############
+#  format  #
+############
+#alias name=value
+#alias name='command'
+#alias name='command arg1 arg2'
+#alias name='/path/to/script'
+#alias name='/path/to/script.pl arg1'
+#unalias aliasname
+
+alias vi="vim"
+alias tmux="tmux -2"
+
+alias c="clear"
+alias cls="clear"
+
+alias mkdir="mkdir -pv"
+alias cp="cp -v"
+alias cpr="cp -r"
+alias mv="mv -v"
+
+alias df="df -h"
+alias du="du -h"
+alias dus="du -s"
+
+alias pg="ps -ef | grep"
+alias free="free -m"
+alias tree="tree -C"
+
+alias vd="vimdiff"
+
+alias grep="grep -E --color"
+alias dfind="find -type d -name"
+alias ffind="find -type f -name"
+
+# tool
+alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1'  #递归删除目录下所有pyc
+alias pi="pip install"
+alias now='date +"%Y-%m-%d %T"'
+
+# svn
+alias svnst="svn status"
+
+# chdir
+alias ..="cd .."
+alias cdd="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../../"
+alias .4="cd ../../../../"
+alias .5="cd ../../../../.."
+alias cds='echo "`pwd`" > ~/.cdsave'  # cd save: save where i am 
+alias cdb='cd "`cat ~/.cdsave`"'      # cd back
+
+# net
+alias ports='netstat -tulanp'
+
+# useful functions
+
+# 根据文件类型解压
+ext(){
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1     ;;
+            *.tar.gz)    tar xzf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar e $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xf $1      ;;
+            *.tbz2)      tar xjvf $1    ;;
+            *.tgz)       tar xzvf $1    ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1    ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# 压缩
+mktar(){ tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz(){ tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz(){ tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+
+# 交换两个文件
+switchfile() {
+    mv $1 ${1}.tmp && mv $2 $1 && mv ${1}.tmp $2
+}
+
+# 到达路径的最深一层目录
+goto(){ [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
+
+# 创建一个目录并跳转到
+mcd() {
+    mkdir -pv "$@"
+    cd "$@"
+}
+
+# python
+pm() {
+    # python manage.py $1 --settings=x ${*:2}
+    python manage.py $*
+}
