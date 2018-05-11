@@ -106,3 +106,8 @@ pm() {
     # python manage.py $1 --settings=x ${*:2}
     python manage.py $*
 }
+
+# json format
+json() {
+     echo "$*" | jq
+}
