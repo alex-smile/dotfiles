@@ -57,7 +57,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # plugins https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 # plugins=(history colored-man redis-cli autojump gem  cp bundler docker extract encode64 urltools wd httpie npm rails web-search pip python virtualenv supervisor virtualenvwrapper celery pyenv django ruby rbenv go zsh-256color zsh-syntax-highlighting zsh-autosuggestions history-substring-search zsh-completions svn git gitfast git-extras gitignore command-not-found sublime tmux tmuxinator brew osx dirhistory)
-plugins=(history autojump cp pip python virtualenv virtualenvwrapper supervisor celery django git gitfast git-extras gitignore command-not-found history-substring-search dirhistory)
+plugins=(history autojump cp pip python virtualenv supervisor celery django git gitfast git-extras gitignore command-not-found history-substring-search dirhistory)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,3 +139,14 @@ alias -s bz2='tar -xjvf'
 #====================== zsh plugin install end ==========================
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="/usr/local/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# set proxy
+export http_proxy=http://127.0.0.1:12759
+export https_proxy=http://127.0.0.1:12759
+export no_proxy=127.0.0.1,localhost,.oa.com,.ied.com
