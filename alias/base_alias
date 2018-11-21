@@ -109,5 +109,5 @@ pm() {
 
 # json format
 json() {
-     echo "$*" | jq
+     echo "$*" | jq --indent 4
 }
