@@ -94,7 +94,7 @@ alias ms='mysql -uroot --password=""'    #mysql
 alias ssh='ssh -2'
 
 # ls for mac
-alias ll='ls -al'   #ls相关，这里--color需要根据终端设
+alias ll='ls -l'   #ls相关，这里--color需要根据终端设
 alias lx='ls -lhBX'        #sort by extension
 alias lz='ls -lhrS'        #sort by size
 alias lt='ls -lhrt'        #sort by date    最常用到，ls -rt，按修改时间查看目录下文件

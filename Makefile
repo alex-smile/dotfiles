@@ -1,4 +1,4 @@
-all: .base_alias .bashrc .dev_alias .export .git_alias .tmux.conf .zsh_alias .zshrc
+all: .base_alias .bashrc .dev_alias .export .git_alias .tmux.conf .zsh_alias .zshrc .vimrc
 
 .base_alias:
 	ln -s ~/dotfiles/alias/base_alias ~/.base_alias
@@ -24,6 +24,9 @@ all: .base_alias .bashrc .dev_alias .export .git_alias .tmux.conf .zsh_alias .zs
 .zshrc:
 	ln -s ~/dotfiles/zshrc ~/.zshrc
 
+.vimrc:
+	ln -s ~/dotfiles/zshrc ~/.vimrc
+
 clear:
 	[ -L ~/.base_alias ] && rm ~/.base_alias
 	[ -L ~/.bashrc ] && rm ~/.bashrc
@@ -33,3 +36,4 @@ clear:
 	[ -L ~/.tmux.conf ] && rm ~/.tmux.conf
 	[ -L ~/.zsh_alias ] && rm ~/.zsh_alias
 	[ -L ~/.zshrc ] && rm ~/.zshrc
+	[ -L ~/.vimrc ] && rm ~/.vimrc
