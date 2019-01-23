@@ -58,6 +58,10 @@ alias cdb='cd "`cat ~/.cdsave`"'      # cd back
 # net
 alias ports='netstat -tulanp'
 
+# pbcopy/pbpaste
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # useful functions
 
 # 根据文件类型解压

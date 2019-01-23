@@ -55,6 +55,10 @@ alias ffind='find -type f -name'  #查找文件
 
 alias chux='chmod u+x'    #该权限
 
+# pbcopy and pbpaste
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # tool
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1'  #递归删除目录下所有pyc
 alias rmlog='rm *.log;rm *.log.*'
