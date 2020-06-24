@@ -15,3 +15,4 @@ source ~/.export
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [[ -s /data/home/tiancichen/.autojump/etc/profile.d/autojump.sh ]] && source /data/home/tiancichen/.autojump/etc/profile.d/autojump.sh
+export PATH="$PATH:$HOME/.ft"
