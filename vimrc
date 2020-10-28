@@ -17,6 +17,11 @@
         set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
     " }
+    
+    " {
+        set shortmess=a
+        set cmdheight=2
+    " }
 " }
 
 " Vundles {
@@ -40,6 +45,7 @@
         Plugin 'jiangmiao/auto-pairs'
         Plugin 'hynek/vim-python-pep8-indent'
         Plugin 'nvie/vim-flake8'
+        Plugin 'fatih/vim-go'
 
         Plugin 'EasyGrep'
     " }
@@ -56,7 +62,7 @@
     " }
 
     " Snippets & Autocomplete {
-        Plugin 'Valloric/YouCompleteMe'
+        "Plugin 'Valloric/YouCompleteMe'
         Plugin 'SirVer/ultisnips'
         
     " }
@@ -118,7 +124,7 @@ filetype plugin indent on
 	set splitright
 	set splitbelow
 
-    autocmd FileType javascript,python,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+    autocmd FileType javascript,python,yml,go autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " }
 
@@ -154,7 +160,7 @@ filetype plugin indent on
             nmap <leader>nt :NERDTreeFind<CR>
 
             let NERDTreeShowBookmarks=1
-            let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.gitignore$']
+            let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.gitignore$', '__pycache__']
             let NERDTreeChDirMode=0
             " let NERDTreeQuitOnOpen=1
             let NERDTreeMouseMode=2
