@@ -146,6 +146,9 @@ alias -s bz2='tar -xjvf'
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # set proxy
 export http_proxy=http://127.0.0.1:12759
 export https_proxy=http://127.0.0.1:12759
