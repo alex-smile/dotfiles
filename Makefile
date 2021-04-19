@@ -25,7 +25,7 @@ all: .base_alias .bashrc .dev_alias .export .git_alias .tmux.conf .zsh_alias .zs
 	ln -s ~/dotfiles/zshrc ~/.zshrc
 
 .vimrc:
-	ln -s ~/dotfiles/zshrc ~/.vimrc
+	ln -s ~/dotfiles/vimrc ~/.vimrc
 
 clear:
 	[ -L ~/.base_alias ] && rm ~/.base_alias
