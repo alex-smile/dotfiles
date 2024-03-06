@@ -1,0 +1,49 @@
+Codeium: AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Ja
+autoDocstring - Python Docstring Generator
+Black Formatter
+Bookmarks
+Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
+Code Spell Checker
+Codiumate - Integrity Agent powered by GPT-3.5&4
+Django
+Docker
+gettext
+Git History
+GitHub Pull Requests
+GitLab Workflow
+GitLens — Git supercharged
+Go
+IntelliCode
+IntelliCode API Usage Examples
+isort
+json
+Jupyter
+Jupyter Cell Tags
+Jupyter Notebook Renderers
+Jupyter Slide Show
+Live Server
+Lua
+Luacheck
+LuaCoderAssist
+MagicPython
+Makefile Tools
+Markdown All in One
+Markdown Preview Enhanced
+Markdown Preview Github Styling
+Markdown Preview Mermaid Support
+Markdown Table
+markdownlint
+Path Autocomplete
+Prettier - Code formatter
+Pylance
+Python
+Python Debugger
+Python Environment Manager
+Python Extension Pack
+YAML
+Draw.io Integration
+Jinja
+Jupyter Keymap
+Kite AutoComplete AI Code: Python, Java, Go, PHP, C/C#/C++, Javascript, HTML/CSS, Typescript, React, Ruby, Scala, Kotlin, Bash, Vue, React
+Lua
+Python Indent
