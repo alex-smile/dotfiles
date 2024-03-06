@@ -1,0 +1,36 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "debug.console.fontSize": 16,
+  "editor.inlineSuggest.enabled": true,
+  "redhat.telemetry.enabled": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "python.analysis.autoImportCompletions": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/*.pyc": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true
+  },
+  "editor.formatOnSave": true,
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "update.mode": "none"
+}
