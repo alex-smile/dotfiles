@@ -61,6 +61,7 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # tool
 alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1'  #递归删除目录下所有pyc
+alias rmemptydir='find . -type d -empty -delete'
 alias rmlog='rm *.log;rm *.log.*'
 alias now='date +"%Y-%m-%d %T"'
 # for svn

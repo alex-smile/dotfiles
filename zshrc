@@ -18,7 +18,7 @@ ZSH_THEME="af-magic"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=7
@@ -94,8 +94,10 @@ export PAGER=cat
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # source others
+source ~/.base_alias
 source ~/.zsh_alias
 source ~/.git_alias
+source ~/.dev_alias
 
 # diy config
 
@@ -111,7 +113,7 @@ export HISTIGNORE="ls:ll:pwd:clear;ll"
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 
 # auto update
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT="true"
 
 # ignore some files
 fignore+=(.pyc)
@@ -141,8 +143,13 @@ alias -s bz2='tar -xjvf'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pyenv
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="/usr/local/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+
+# node10
+export PATH="/data/service/node-v10/bin:$PYENV_ROOT/bin:$PATH"
+export LDFLAGS="-L/data/service/node-v10/lib"
+export CPPFLAGS="-I/data/service/node-v10/include"
+
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -150,7 +157,31 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(direnv hook zsh)"
 
 # set proxy
-export http_proxy=http://127.0.0.1:12759
-export https_proxy=http://127.0.0.1:12759
-export no_proxy=127.0.0.1,localhost,.oa.com,.ied.com
-export PATH="$PATH:$HOME/.ft"
+#export http_proxy=http://127.0.0.1:12759
+#export https_proxy=http://127.0.0.1:12759
+export no_proxy=127.0.0.1,localhost
+
+export PATH="$PATH:$HOME/.ft:/data/service/nginx/sbin/"
+export PATH="$PATH:/data/service/go/bin:/root/go/bin:/usr/share/logstash/bin/:/usr/share/filebeat/bin/"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+export GPG_TTY=$(tty)
+
+export PYTHON_HOME=/data/service/python-3.7.4
+export VIRTUALENVWRAPPER_PYTHON=$PYTHON_HOME/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=$PYTHON_HOME/bin/virtualenv
+
+if [ -f $PYTHON_HOME/bin/virtualenvwrapper.sh ]; then
+        . $PYTHON_HOME/bin/virtualenvwrapper.sh
+fi
+
+[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
+
+# autoload -U compinit && compinit -u
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+source <(kubectl completion zsh)
+source <(flux completion zsh)
+source <(kubectl-argo-rollouts completion zsh)
+export PATH=/data/service/preci//PreCI:$PATH

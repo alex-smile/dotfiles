@@ -13,3 +13,6 @@ source ~/.dev_alias
 source ~/.export
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export GPG_TTY=$(tty)
