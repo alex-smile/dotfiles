@@ -40,12 +40,12 @@ link-user-config:
 
 .PHONY: backup-user-config
 backup-user-config:
-	@if [ -f ~/.bash_alias ]; then cp ~/.bash_alias ~/.bash_alias.bak.${NOW} fi
-	@if [ -f ~/.dev_alias ]; then cp ~/.dev_alias ~/.dev_alias.bak.${NOW} fi
-	@if [ -f ~/.git_alias ]; then cp ~/.git_alias ~/.git_alias.bak.${NOW} fi
-	@if [ -f ~/.zsh_alias ]; then cp ~/.zsh_alias ~/.zsh_alias.bak.${NOW} fi
-	@if [ -f ~/.zshrc ]; then cp ~/.zshrc ~/.zshrc.bak.${NOW} fi
-	@if [ -f ~/.vimrc ]; then cp ~/.vimrc ~/.vimrc.bak.${NOW} fi
+	@if [ -f ~/.bash_alias ]; then cp ~/.bash_alias ~/.bash_alias.bak.${NOW}; fi
+	@if [ -f ~/.dev_alias ]; then cp ~/.dev_alias ~/.dev_alias.bak.${NOW}; fi
+	@if [ -f ~/.git_alias ]; then cp ~/.git_alias ~/.git_alias.bak.${NOW}; fi
+	@if [ -f ~/.zsh_alias ]; then cp ~/.zsh_alias ~/.zsh_alias.bak.${NOW}; fi
+	@if [ -f ~/.zshrc ]; then cp ~/.zshrc ~/.zshrc.bak.${NOW}; fi
+	@if [ -f ~/.vimrc ]; then cp ~/.vimrc ~/.vimrc.bak.${NOW}; fi
 
 .PHONY: clean-user-config
 clean-user-config:
