@@ -1,4 +1,5 @@
-# zsh
+
+## zsh
 - [安装和使用Oh-My-Zsh](https://github.com/zeus911/blog-3/blob/master/others/install-and-use-oh-my-zsh.md)
 
 查看当前所使用的 SHELL
@@ -34,20 +35,42 @@ or
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-# update config
+## user config
+
 ```shell
 make backup-user-config
 make clean-user-config
 make link-user-config
 ```
 
-# vim
+## vim
 
-## Set up Vundle
+Set up Vundle
 ```shell
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-## Install Plugins
+Install Plugins
+```
+# Launch vim and run
+:PluginInstall
+```
 
-Launch vim and run :PluginInstall
+## tools
+
+```bash
+apt install direnv
+apt install autojump
+apt install silversearcher-ag
+apt install jq
+```
+
+## Go
+
+- [downloads](https://go.dev/dl/)
+
+install
+```shell
+rm -rf /usr/local/go && tar -C /usr/local -xzf ~/workspace/pkg/go1.23.3.linux-amd64.tar.gz
+```
+
